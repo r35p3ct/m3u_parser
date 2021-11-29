@@ -103,7 +103,7 @@ class M3uParser:
         else:
             logging.info("Started parsing m3u file...")
             try:
-                with open(unquote(path), errors="ignore") as fp:
+                with open(unquote(path), errors="ignore",encoding='UTF8') as fp:
                     self._content = fp.read()
             except FileNotFoundError:
                 logging.error("File doesn't exist!!!")
